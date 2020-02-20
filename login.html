@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width" />
+      <title>Cynet - Local internet service provide</title>
+      <link rel="stylesheet" href="css/components.css">
+      <link rel="stylesheet" href="css/responsee.css">
+      <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+      <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <!-- CUSTOM STYLE -->  
+      <link rel="stylesheet" href="css/template-style.css">
+      <!-- <link href='http://fonts.googleapis.com/css?family=Nunito:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'> --> 
+      <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+      <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
+      <script type="text/javascript" src="js/modernizr.js"></script>
+      <script type="text/javascript" src="js/responsee.js"></script>   
+      <!--[if lt IE 9]> 
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> 
+      <![endif]--> 
+   </head>
+   <body class="size-1140">
+    $(if chap-id)
+        <form name="sendin" action="$(link-login-only)" method="post">
+            <input type="hidden" name="username" />
+            <input type="hidden" name="password" />
+            <input type="hidden" name="dst" value="$(link-orig)" />
+            <input type="hidden" name="popup" value="true" />
+        </form>
+        
+        <script type="text/javascript" src="/md5.js"></script>
+        <script type="text/javascript">
+        //<!--
+            function doLogin() {
+            document.sendin.username.value = document.login.username.value;
+            document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+            document.sendin.submit();
+            return false;
+            }
+        //-->
+        </script>
+    $(endif)
+      <!-- TOP NAV WITH LOGO -->  
+      <header>
+         <nav>
+            <div class="line">
+               <div class="top-nav">
+                  <div class="s-12 l-3">
+                     <div class="box" style="border-top: solid 0.8em rgb(167, 47, 204)"><a href="#"><img src="images/logo.gif"></a></div>
+                     <div class="box" style="margin-top:5%;">
+                        <h3 style="text-align:center; padding-bottom:5%">Login Hotspot</h3>
+                        <form class="customform" name="login" action="$(link-login-only)" method="post"
+					    $(if chap-id) onSubmit="return doLogin()" $(endif)>
+						<input type="hidden" name="dst" value="$(link-orig)" />
+						<input type="hidden" name="popup" value="true" />
+                        
+                        <input name="username" type="text" value="$(username)" placeholder="User ID" required>
+                        <input name="password" type="password" placeholder="Password" required>
+                        <button type="Submit">Login</button>
+                        </form>
+                        $(if error)<br /><div style="color: rgb(216, 84, 228); font-size: 9px">$(error)</div>$(endif)
+                     </div>
+                  </div>
+                  <p class="nav-text">Menu
+                  </p>
+                  <ul class="top-ul chevron">
+                     
+                     <div class="s-12 l-9">
+                     <div class="right">
+                        <li> <a>Home</a></li>
+                        <li><a>Packeges</a>
+                        	<ul>
+                               <li><a>Kes 999 5Mbps</a></li>
+                               <li><a>Kes 1,499 10Mbps</a></li>
+                               <li><a>Kes 1,999 20Mbps</a></li>
+                               <li><a>Business Packages</a></li>
+                            </ul>
+                        </li>
+                        </li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Contacts</a></li>
+                     </div>
+                     </div>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section>
+         <!-- CAROUSEL -->  	
+         <div id="carousel">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+               <div class="item">
+                  <img src="img/first.jpg" alt="">      
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9 right">
+                           <h2>Wireless Internet Hotspot</h2>
+                        </div>
+                        <div class="s-12 l-9 right">
+                           <p>Cynet - Network Services</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="img/second.jpg" alt="">      
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9 right">
+                           <h2>Web Design & Programming</h2>
+                        </div>
+                        <div class="s-12 l-9 right">
+                           <p>Cynet - Network Services</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="item">
+                  <img src="img/third.jpg" alt="">      
+                  <div class="carousel-text">
+                     <div class="line">
+                        <div class="s-12 l-9 right">
+                           <h2>Computer Services</h2>
+                        </div>
+                        <div class="s-12 l-9 right">
+                           <p>Hardware & Software
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- FIRST BLOCK --> 	
+         <div id="first-block">
+            <div class="line">
+               <h2>Cynet Network Services</h2>
+               <p class="subtitile">Melayani</p>
+               <div class="margin">
+                  <div class="s-12 l-3 margin-bottom">
+                     <i class="icon-paperplane_ico icon2x"></i>
+                     <h3>Wi-Fi</h3>
+                     <p>Wireles Internet Hotspot</p>
+                  </div>
+                  <div class="s-12 l-3 margin-bottom">
+                     <i class="icon-star icon2x"></i>
+                     <h3>Services</h3>
+                     <p>Service and Repair Computers</p>
+                  </div>
+                  <div class="s-12 l-3 margin-bottom">
+                     <i class="icon-message icon2x"></i>
+                     <h3>Computer Training</h3>
+                     <p>Office applications </p>
+                     <p> </p>
+                  </div>
+                  <div class="s-12 l-3 margin-bottom">
+                     <i class="icon-mail icon2x"></i>
+                     <h3>Web-design Training</h3>
+                     <p>Learn Web-design</p>
+                     <p>Learn Web applications development</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- SECOND BLOCK --> 	
+         <div id="second-block">
+            <div class="line">
+               <div class="margin-bottom">
+                  <div class="margin">
+                     <article class="s-12 l-8 center">
+                        <h1>Amazing title</h1>
+                        <p class="margin-bottom">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                        </p>
+                        <a class="button s-12 l-4 center" href="product.html">Read more</a>  			
+                     </article>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- GALLERY --> 	
+         <div id="third-block">
+            <div class="line">
+               <h2>Responsive gallery</h2>
+               <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+               </p>
+               <div class="margin">
+                  <div class="s-12 l-3">
+                     <img src="img/first-small.jpg">      
+                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                     </p>
+                  </div>
+                  <div class="s-12 l-3">
+                     <img src="img/second-small.jpg">      
+                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                     </p>
+                  </div>
+                  <div class="s-12 l-3">
+                     <img src="img/third-small.jpg">      
+                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                     </p>
+                  </div>
+                  <div class="s-12 l-3">
+                     <img src="img/fourth-small.jpg">      
+                     <p class="subtitile">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div id="fourth-block">
+            <div class="line">
+               <div id="owl-demo2" class="owl-carousel owl-theme">
+                  <div class="item">
+                     <h2>Amazing responsive template</h2>
+                     <p class="s-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+                  <div class="item">
+                     <h2>Responsive components</h2>
+                     <p class="s-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+                  <div class="item">
+                     <h2>Retina ready</h2>
+                     <p class="s-12 l-8 center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit  lobortis nisl ut aliquip ex ea commodo consequat.
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- FOOTER -->   
+      <footer>
+         <div class="line">
+            <div class="s-12 l-12">
+               <p class="right" style="text-align:right">&copy;,<script>document.write( new Date().getFullYear() );</script> Cynet Network Services<br>
+				Ngumba Office  - Messo Complex<br>
+                Whatsapp - +254 777 910 122</p>
+            </div>
+         </div>
+      </footer>
+      <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>   
+      <script type="text/javascript">
+         jQuery(document).ready(function($) {  
+           $("#owl-demo").owlCarousel({
+         	slideSpeed : 300,
+         	autoPlay : true,
+         	navigation : false,
+         	pagination : false,
+         	singleItem:true,
+			transitionStyle : "fadeUp"
+           });
+           $("#owl-demo2").owlCarousel({
+         	slideSpeed : 300,
+         	autoPlay : true,
+         	navigation : false,
+         	pagination : true,
+         	singleItem:true
+           });
+         });	
+          
+      </script> 
+	  <script type="text/javascript">
+        
+          document.login.username.focus();
+        //-->
+      </script>
+   </body>
+</html>
